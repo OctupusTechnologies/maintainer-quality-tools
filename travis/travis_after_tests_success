@@ -3,5 +3,5 @@ set -e
 if [[ "${TESTS:-1}" == "1" ]] && [[ "${TEST_ENABLE:-1}" == "1" ]] && [[ "${LINT_CHECK}" != "1" ]]; then
     coverage report --show-missing
     pip install codecov
-    codecov -t 94cfefae-be02-494a-934d-b600b4bc0bf3
+    codecov -t "${CODECOV_TOKEN}"
 fi
